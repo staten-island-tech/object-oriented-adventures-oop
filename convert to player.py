@@ -18,16 +18,17 @@ while login == ('unsuccessful'):
         login = ('unsuccessful')
 
 class Convert():
-    def __init__(data,user,points):
+    def __init__(data,user,points,levels):
         data.user = user
         data.points = points
+        data.levels = levels
     def __str__(data):
-        return f"{data.user},{data.points}"
-def convert(user,points):
-    new_player = Convert(user,points)
+        return f"{data.user},{data.points},{data.levels}"
+def convert(user,points,levels):
+    new_player = Convert(user,points,levels)
     player.append(new_player.__dict__)
 
-convert(x,0)
+convert(x,0,1)
     
 new_file = "updated.json"
 with open(new_file, "w") as f:
