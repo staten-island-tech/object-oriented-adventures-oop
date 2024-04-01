@@ -16,3 +16,14 @@ class Play():
                 else:
                     x = input('Username does not exist. Please enter again ')
                     login = ('unsuccessful')
+    def actions():
+        x = input('''What would you like to do?
+Train
+Fight
+''')
+        if x ==('Train'):
+            Train
+            
+class Train():
+    def training():
+        
