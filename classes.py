@@ -17,8 +17,7 @@ while login == ('unsuccessful'):
         x = input('Username does not exist. Please enter again ')
         login = ('unsuccessful')
 
-class Mage():
-    
+
 
 new_file = "updated.json"
 with open(new_file, "w") as f:

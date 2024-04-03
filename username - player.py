@@ -7,29 +7,43 @@ user = json.load(test)
 with open("player.json", "r") as f:
     player = json.load(f)
 
-x = input('What is your username? ')
-login = ('unsuccessful')
-while login == ('unsuccessful'):
-    if x in user:
-        print('Logged in ')
-        login = ('successful')
-    else:
-        x = input('Username does not exist. Please enter again ')
-        login = ('unsuccessful')
+username = input('Enter a username: ')
+gooduser = ('NotGood')
+while gooduser != ('Good'):
+    for usernames in player:
+        if username != usernames['user']:
+            print('Username not Taken')
+            usernames.append(username)
+            gooduser = 'Good'
+        else:
+            username = input('Username Taken. Enter another Username ')
 
 class Convert():
-    def __init__(data,user,points,levels):
+    def __init__(data,user,exp,levels,strength,defense,speed,magic,role):
         data.user = user
-        data.points = points
+        data.exp = exp
         data.levels = levels
+        data.strength = strength
+        data.defense = defense
+        data.speed = speed
+        data.magic = magic
+        data.role = role
     def __str__(data):
-        return f"{data.user},{data.points},{data.levels}"
-def convert(user,points,levels):
-    new_player = Convert(user,points,levels)
+        return f"{data.user},{data.levels},{data.exp},{data.strength},{data.defense},{data.speed},{data.magic},{data.role}"
+def convert(user,exp,levels,strength,defense,speed,magic,role):
+    new_player = Convert(user,exp,levels,strength,defense,speed,magic,role)
     player.append(new_player.__dict__)
 
-convert(x,0,1)
-    
+y = input('What class do you want to be')
+if y ==('Warrior'):
+    convert(username,0,1,5,0,0,0,y)
+elif y ==('Tank'):
+    convert(username,0,1,0,5,0,0,y)
+elif y ==('Mage'):
+    convert(username,0,1,0,0,0,5,y)
+elif y ==('Ace'):
+    convert(username,0,1,0,0,5,0,y)
+
 new_file = "updated.json"
 with open(new_file, "w") as f:
     json_string = json.dumps(player)
