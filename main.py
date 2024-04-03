@@ -13,7 +13,7 @@ sprint('The choises are Mage, Warrior, Tank, and Ace.')
 sprint('Mages have increased magic stats and magic powers.')
 sprint('Warriors have increased strenght and attack power')
 sprint('Tanks have increased health and defensive stats')
-sprint('')
+sprint('Aces have increased speed and a gradual increase in every other stat')
 x = input(sprint('Please chose'))
 
 
