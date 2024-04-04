@@ -42,7 +42,7 @@ elif y ==('Tank'):
 elif y ==('Mage'):
     convert(username,0,1,0,0,0,5,y)
 elif y ==('Ace'):
-    convert(username,0,1,0,0,5,0,y)
+    convert(username,0,1,1,1,3,1,y)
 
 new_file = "updated.json"
 with open(new_file, "w") as f:

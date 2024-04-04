@@ -1,18 +1,16 @@
-import sys,time
-import functions
-
+from functions import Text
 
 ##giving the story line of the game
 Text.sprint('Loading game ...')
-delete_last()
+Text.delete()
 Text.sprint('Loading game ...')
-delete_last()
+Text.delete()
 Text.sprint('Loading game ...')
-delete_last()
+Text.delete()
 Text.sprint('Loading game ...')
-delete_last()
+Text.delete()
 Text.sprint('Loading game ...')
-delete_last()
+Text.delete()
 Text.sprint('Welcome to Pythonia! This is where you will start your monster slaying journey.')
 Text.sprint('You will have a choice Between mulitpule classes.')
 Text.sprint('The choises are Mage, Warrior, Tank, and Ace.')
