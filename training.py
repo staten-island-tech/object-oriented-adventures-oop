@@ -1,30 +1,29 @@
 import json
 import os
 
-test = open("player.json", encoding="utf8")
-player = json.load(test)
 
 
-
+with open("player.json", mode='r') as read:
+    data = json.load(read)
 
 def Training(x):
-    for i in player:
+    for i in data:
         if x == i['user']:
             y = input('What do you want to train? ')
             if y == ('Strength'):
                 i.update({'strength':int(i['strength'])+1})
             elif y == ('Defense'):
-                i['defense'] += 1
+                i.update({'defense':int(i['defense'])+1})
             elif y == ('Magic'):
-                i['magic'] += 1
+                i.update({'magic':int(i['magic'])+1})
             elif y == ('Speed'):
-                i['speed'] += 1
+                i.update({'speed':int(i['speed'])+1})
 
-Training('hi')
+Training(user)
 
 new_file = "updated.json"
 with open(new_file, "w") as f:
-    json_string = json.dumps(player)
+    json_string = json.dumps(data)
     f.write(json_string)
 
 os.remove("player.json")
