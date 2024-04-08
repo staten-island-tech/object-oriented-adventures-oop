@@ -22,4 +22,4 @@ Text.delete_all(8)
 
 x = input(Text.slow_print('Now that you have selected your class are you ready to start your tutorial? [Y/N]:'))
 if x == ('Y'):
-    Text.slow_print('wilson likes men')
+    Text.slow_print('hi')
