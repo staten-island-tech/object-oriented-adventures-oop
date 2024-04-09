@@ -5,16 +5,6 @@ import os
 with open("player.json", "r") as f:
     player = json.load(f)
 
-username = input('Enter a username: ')
-gooduser = ('NotGood')
-while gooduser != ('Good'):
-    for usernames in player:
-        if username != usernames['user']:
-            print('Username not Taken')
-            gooduser = 'Good'
-        else:
-            username = input('Username Taken. Enter another Username ')
-
 class Convert():
     def __init__(data,user,exp,levels,strength,defense,speed,magic,role):
         data.user = user
@@ -27,11 +17,22 @@ class Convert():
         data.role = role
     def __str__(data):
         return f"{data.user},{data.levels},{data.exp},{data.strength},{data.defense},{data.speed},{data.magic},{data.role}"
+
 def convert(user,exp,levels,strength,defense,speed,magic,role):
     new_player = Convert(user,exp,levels,strength,defense,speed,magic,role)
     player.append(new_player.__dict__)
 
-y = input('What class do you want to be')
+username = input('Enter a username: ')
+gooduser = ('NotGood')
+while gooduser != ('Good'):
+    for players in player:
+        if username != players['user']:
+            print('Username not Taken')
+            gooduser = 'Good'
+        else:
+            username = input('Username Taken. Enter another Username ')
+
+y = input('What class do you want to be ')
 if y ==('Warrior'):
     convert(username,0,1,5,0,0,0,y)
 elif y ==('Tank'):
