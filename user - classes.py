@@ -11,7 +11,6 @@ while gooduser != ('Good'):
     for usernames in player:
         if username != usernames['user']:
             print('Username not Taken')
-            usernames.append(username)
             gooduser = 'Good'
         else:
             username = input('Username Taken. Enter another Username ')
