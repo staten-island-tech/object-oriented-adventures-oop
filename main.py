@@ -20,6 +20,23 @@ Text.fast_print('Aces have increased speed and a slight increase in every other 
 Text.fast_print('Please select your class next')
 Text.delete_all(8)
 
-x = input(Text.slow_print('Now that you have selected your class are you ready to start your tutorial? [Y/N]:'))
-if x == ('Y'):
-    Text.slow_print('hi')
+def Tutorial():
+    x = input(Text.slow_print('Now that you have selected your class are you ready to start your tutorial? [Y/N]:'))
+    if x == ('Y'):
+        Text.delete
+        Text.slow_print('Starting Tutorial...')
+        Text.delete()
+        Text.slow_print('...')
+        Text.delete()
+        Text.slow_print('...')
+        Text.delete()
+    else:
+        Text.delete
+        Text.slow_print('Too bad we are starting the tutorial anyway...')
+        Text.delete()
+        Text.slow_print('...')
+        Text.delete()
+        Text.slow_print('...')
+        Text.delete()
+
+Tutorial()
