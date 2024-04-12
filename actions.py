@@ -1,21 +1,33 @@
-from text_functions import Text 
+import text_functions
+
 
 
 def Tutorial():
-    x = input(Text.slow_print('Now that you have selected your class are you ready to start your tutorial? [Y/N]:'))
+    t = text_functions.Text
+    x = input(t.slow_print('Now that you have selected your class are you ready to start your tutorial? [Y/N]:'))
     if x == ('Y'):
-        Text.delete
-        Text.slow_print('Starting Tutorial...')
-        Text.delete()
-        Text.slow_print('...')
-        Text.delete()
-        Text.slow_print('...')
-        Text.delete()
+        t.delete
+        t.slow_print('Starting Tutorial...')
+        t.delete()
+        t.slow_print('...')
+        t.delete()
+        t.slow_print('...')
+        t.delete()
     else:
-        Text.delete
-        Text.slow_print('Too bad we are starting the tutorial anyway...')
-        Text.delete()
-        Text.slow_print('...')
-        Text.delete()
-        Text.slow_print('...')
-        Text.delete()
+        t.delete
+        t.slow_print('Too bad we are starting the tutorial anyway...')
+        t.delete()
+        t.slow_print('...')
+        t.delete()
+        t.slow_print('...')
+        t.delete()
+
+def Actions():
+    x = input(
+'''What would you like to do? 
+Fight
+Shop
+Save and Leave Game
+'''
+    )
+Actions()
