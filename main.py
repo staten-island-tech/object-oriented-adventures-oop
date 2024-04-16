@@ -1,5 +1,4 @@
 import text_functions
-import actions
 
 t = text_functions.Text
 t.slow_print('Loading game ...')
@@ -22,5 +21,4 @@ t.fast_print('Please select your class next')
 t.delete_all(8)
 
 
-actions.Tutorial()
 
