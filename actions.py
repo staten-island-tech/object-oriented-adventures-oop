@@ -21,7 +21,6 @@ def Tutorial():
         t.delete()
         t.slow_print('...')
         t.delete()
-
 def Actions():
     x = input(
 '''What would you like to do? 
