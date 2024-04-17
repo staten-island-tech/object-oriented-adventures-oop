@@ -1,7 +1,7 @@
 import json
 import os
 
-with open("player.json", "r") as f:
+with open("moves.json", "r") as f:
     moves = json.load(f)
 
 
@@ -16,14 +16,15 @@ class Moves():
 
 def create_moves(name, level, power, movetype):
     new_move = Moves(name, level, power, movetype)
+    
     moves.append(new_move.__dict__)
 
 y = 'y'
 while y == ('y'):
-    name = input('Name of Move')
-    level = input('Level of Move')
-    power = input('Power of Move')
-    movetype = input('Move Type')
+    name = input('Name of Move: ')
+    level = input('Level of Move: ')
+    power = input('Power of Move: ')
+    movetype = input('Move Type: ')
     create_moves(name, level, power, movetype)
     y = input('Creating another move?')
 
