@@ -19,7 +19,6 @@ def Training(x):
             elif y == ('Speed'):
                 i.update({'speed':int(i['speed'])+1})
 
-Training(user)
 
 new_file = "updated.json"
 with open(new_file, "w") as f:
