@@ -1,1 +1,20 @@
-[{"monster": "Zombie", "monster_level": "1", "attack_strength": "20", "health_level": "30", "speed": "1", "experince_dropped": "5", "money_dropped": "5"}]
+[
+    {
+        "monster": "Zombie",
+        "monster_level": "1",
+        "attack_strength": "20",
+        "health_level": "30",
+        "speed": "1",
+        "experince_dropped": "5",
+        "money_dropped": "5"
+    },
+    {
+        "monster": "Skeleton",
+        "monster_level": "2",
+        "attack_strength": "40",
+        "health_level": "60",
+        "speed": "2",
+        "experince_dropped": "10",
+        "money_dropped": "10"
+    }
+]
