@@ -1,2 +1,68 @@
-[{"name": "Hand Blast", "level": "1", "power": "10", "movetype": "Magic"}
+[
+    {
+        "name": "Hand Blast",
+        "level": "1",
+        "power": "10",
+        "movetype": "Magic"
+    },
+    {
+        "name": "Magic Ball",
+        "level": "2",
+        "power": "20",
+        "movetype": "Magic"
+    },
+    {
+        "name": "Magic Burst",
+        "level": "4",
+        "power": "35",
+        "movetype": "Magic"
+    },
+    {
+        "name": "Magic Wave Emission",
+        "level": "6",
+        "power": "50",
+        "movetype": "Magic"
+    },
+    {
+        "name": "Magic Beam",
+        "level": "10",
+        "power": "70",
+        "movetype": "Magic"
+    },
+    {
+        "name": "Punch",
+        "level": "1",
+        "power": "10",
+        "movetype": "Physical"
+    },
+    {
+        "name": "Cut",
+        "level": "2",
+        "power": "20",
+        "movetype": "Physical"
+    },
+    {
+        "name": "Slap",
+        "level": "4",
+        "power": "35",
+        "movetype": "Physical"
+    },
+    {
+        "name": "Kick",
+        "level": "6",
+        "power": "50",
+        "movetype": "Physical"
+    },
+    {
+        "name": "Poke",
+        "level": "10",
+        "power": "70",
+        "movetype": "Physical"
+    },
+    {
+        "name": "Shank em",
+        "level": "0",
+        "power": "25",
+        "movetype": "Easter Egg"
+    }
 ]

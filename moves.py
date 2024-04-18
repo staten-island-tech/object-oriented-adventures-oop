@@ -30,7 +30,7 @@ while y == ('y'):
 
 new_file = "updated.json"
 with open(new_file, "w") as f:
-    json_string = json.dumps(moves)
+    json_string = json.dumps(moves, indent=4)
     f.write(json_string)
 
 os.remove("moves.json")
