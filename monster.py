@@ -2,7 +2,7 @@ import json
 import os
 
 with open("monster.json", "r") as f:
-    moves = json.load(f)
+    monster = json.load(f)
 
 class Monster():
     def __init__(data,name, monster_level, attack_strength, health_level, speed, experince_dropped,money_dropped ):
@@ -20,14 +20,14 @@ class Monster():
 def create_monster(name, monster_level, attack_strength, health_level, speed, experince_dropped,money_dropped):
     new_Monster = Monster(name, monster_level, attack_strength, health_level, speed, experince_dropped,money_dropped)
     
-    moves.append(new_Monster.__dict__)
+    monster.append(new_Monster.__dict__)
 
 y = 'y'
 while y == ('y'):
-    name = input('Name of Move: ')
-    monster_level = input('Level of Move: ')
-    attack_strength = input('Power of Move: ')
-    health_level = input('Move Type: ')
+    name = input('Name of monster: ').capitalize()
+    monster_level = input('Level of monster: ')
+    attack_strength = input('attack strength of monster: ')
+    health_level = input('monster health: ')
     speed = input('speed: ')
     experince_dropped = input('experince dropped: ')
     money_dropped = input('money dropped: ')
@@ -35,12 +35,11 @@ while y == ('y'):
     create_monster(name, monster_level, attack_strength, health_level, speed, experince_dropped,money_dropped)
     y = input('Creating another move?')
 
-create_monster()
 
 new_file = "updated.json"
 with open(new_file, "w") as f:
-    json_string = json.dumps(moves)
+    json_string = json.dumps(monster, indent=4)
     f.write(json_string)
 
-os.remove("moves.json")
-os.rename(new_file, "moves.json")
+os.remove("monster.json")
+os.rename(new_file, "monster.json")
