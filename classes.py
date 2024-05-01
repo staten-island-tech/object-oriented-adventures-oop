@@ -42,7 +42,7 @@ elif y ==('Mage'):
 
 new_file = "updated.json"
 with open(new_file, "w") as f:
-    json_string = json.dumps(player)
+    json_string = json.dumps(player, indent = 4)
     f.write(json_string)
 
 os.remove("player.json")
