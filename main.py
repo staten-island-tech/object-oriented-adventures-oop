@@ -21,6 +21,6 @@ t.fast_print('Tanks have increased health and defensive stats')
 t.fast_print('Please select your class next')
 t.delete_all(8)
 
+x = input('would you like to start fighting monsters?: [Y/N]')
 
-actions.Tutorial()
 
