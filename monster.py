@@ -33,7 +33,7 @@ while y == ('y'):
     money_dropped = input('money dropped: ')
 
     create_monster(name, monster_level, attack_strength, health_level, speed, experince_dropped,money_dropped)
-    y = input('Creating another move?')
+    y = input('Creating another move?').lower()
 
 
 new_file = "updated.json"
