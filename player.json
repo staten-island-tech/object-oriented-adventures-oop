@@ -1,2 +1,1 @@
-[{"user": "wilson", "exp": 100, "levels": 100, "strength": 999, "defense": 999, "speed": 999, "magic": 999, "role": "admin"}, 
-{"user": "hi", "exp": 0, "levels": 1, "strength": 6, "defense": 0, "speed": 0, "magic": 0, "role": "Warrior"}]
+[{"user": "wilson", "exp": 100, "levels": 100, "strength": 999, "defense": 999, "speed": 999, "magic": 999, "role": "admin"}, {"user": "hi", "exp": 0, "levels": 1, "strength": 6, "defense": 0, "speed": 0, "magic": 0, "role": "Warrior"}, {"user": "willy", "exp": 0, "levels": 1, "strength": 0, "defense": 0, "speed": 0, "magic": 5, "role": "Mage"}]

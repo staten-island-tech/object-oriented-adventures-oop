@@ -1,5 +1,4 @@
 import text_functions
-import actions
 
 t = text_functions.Text
 t.slow_print('Loading game ...')
@@ -20,7 +19,22 @@ t.fast_print('Warriors have increased strength and attack power')
 t.fast_print('Tanks have increased health and defensive stats')
 t.fast_print('Please select your class next')
 t.delete_all(8)
+import classes
 
-x = input('would you like to start fighting monsters?: [Y/N]')
 
 
+def Actions():
+    x = input('''What is your next course of action?
+Fight
+Train
+Shop''')
+    if x == 'Fight':
+        import fight
+    elif x == 'Train':
+        import training
+    elif x == 'Shop':
+        import shop
+    elif x == 'Gamble':
+        import gamble
+
+Actions()

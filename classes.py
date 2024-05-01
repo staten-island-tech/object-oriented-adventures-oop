@@ -22,23 +22,30 @@ def convert(user,exp,levels,strength,defense,speed,magic,role):
     new_player = Convert(user,exp,levels,strength,defense,speed,magic,role)
     player.append(new_player.__dict__)
 
-username = input('Enter a username: ')
-gooduser = ('NotGood')
-while gooduser != ('Good'):
-    for players in player:
-        if username != players['user']:
-            print('Username not Taken')
-            gooduser = 'Good'
-        else:
-            username = input('Username Taken. Enter another Username ')
+login = input('Are you logging in or signing up')
+if login == 'Sign Up':
+    user = input('Enter a username: ')
+    gooduser = ('NotGood')
+    while gooduser != ('Good'):
+        for players in player:
+            if user != players['user']:
+                print('Username not Taken, Successfully Signed Up')
+                gooduser = 'Good'
+            else:
+                user = input('Username Taken. Enter another Username ')
 
-y = input('What class do you want to be ')
-if y ==('Warrior'):
-    convert(username,0,1,5,0,0,0,y)
-elif y ==('Tank'):
-    convert(username,0,1,0,5,0,0,y)
-elif y ==('Mage'):
-    convert(username,0,1,0,0,0,5,y)
+    y = input('What class do you want to be ')
+    if y ==('Warrior'):
+        convert(user,0,1,5,0,0,0,y)
+    elif y ==('Tank'):
+        convert(user,0,1,0,5,0,0,y)
+    elif y ==('Mage'):
+        convert(user,0,1,0,0,0,5,y)
+else:
+    user = input('Enter a username: ')
+    for players in player:
+        if user == players['user']:
+            print('Logged in')
 
 new_file = "updated.json"
 with open(new_file, "w") as f:
