@@ -1,7 +1,6 @@
 import json
 import os
-
-
+from classes import user
 
 with open("player.json", mode='r') as read:
     data = json.load(read)

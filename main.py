@@ -21,20 +21,16 @@ t.fast_print('Please select your class next')
 t.delete_all(8)
 import classes
 
-
-
-def Actions():
-    x = input('''What is your next course of action?
+action = input('''What is your next course of action?
 Fight
 Train
-Shop''')
-    if x == 'Fight':
-        import fight
-    elif x == 'Train':
-        import training
-    elif x == 'Shop':
-        import shop
-    elif x == 'Gamble':
-        import gamble
-
-Actions()
+Shop
+''')
+if action == 'Fight':
+    import fight
+elif action == 'Train':
+    import training
+elif action == 'Shop':
+    import shop
+elif action == 'Gamble':
+    import gamble

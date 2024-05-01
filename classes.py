@@ -22,7 +22,7 @@ def convert(user,exp,levels,strength,defense,speed,magic,role):
     new_player = Convert(user,exp,levels,strength,defense,speed,magic,role)
     player.append(new_player.__dict__)
 
-login = input('Are you logging in or signing up')
+login = input('Are you logging in or signing up ')
 if login == 'Sign Up':
     user = input('Enter a username: ')
     gooduser = ('NotGood')
@@ -49,7 +49,7 @@ else:
 
 new_file = "updated.json"
 with open(new_file, "w") as f:
-    json_string = json.dumps(player)
+    json_string = json.dumps(player, indent=4)
     f.write(json_string)
 
 os.remove("player.json")
