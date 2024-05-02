@@ -6,20 +6,21 @@ with open("player.json", "r") as f:
     player = json.load(f)
 
 class Convert():
-    def __init__(data,user,exp,levels,strength,defense,speed,magic,role):
+    def __init__(data,user,exp,levels,money,strength,defense,speed,magic,role):
         data.user = user
         data.exp = exp
         data.levels = levels
+        data.money = money
         data.strength = strength
         data.defense = defense
         data.speed = speed
         data.magic = magic
         data.role = role
     def __str__(data):
-        return f"{data.user},{data.levels},{data.exp},{data.strength},{data.defense},{data.speed},{data.magic},{data.role}"
+        return f"{data.user},{data.exp},{data.levels},{data.money},{data.strength},{data.defense},{data.speed},{data.magic},{data.role}"
 
-def convert(user,exp,levels,strength,defense,speed,magic,role):
-    new_player = Convert(user,exp,levels,strength,defense,speed,magic,role)
+def convert(user,exp,levels,money,strength,defense,speed,magic,role):
+    new_player = Convert(user,exp,levels,money,strength,defense,speed,magic,role)
     player.append(new_player.__dict__)
 
 login = input('Are you logging in or signing up ')
@@ -36,11 +37,11 @@ if login == 'Sign Up':
 
     y = input('What class do you want to be ')
     if y ==('Warrior'):
-        convert(user,0,1,5,0,0,0,y)
+        convert(user,0,1,0,5,0,0,0,y)
     elif y ==('Tank'):
-        convert(user,0,1,0,5,0,0,y)
+        convert(user,0,1,0,0,5,0,0,y)
     elif y ==('Mage'):
-        convert(user,0,1,0,0,0,5,y)
+        convert(user,0,1,0,0,0,0,5,y)
 else:
     user = input('Enter a username: ')
     for players in player:
