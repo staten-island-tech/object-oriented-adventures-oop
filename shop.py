@@ -11,4 +11,11 @@ t.delete_all(3)
 
 if x == 'Y':
       t.fast_print('''here are all of the options that are avalibale for purchase:
-        1)strength consumable:''')
+1)Strength consumable
+  Cost-$100
+  Boost-1+ strength
+  Code-SC1
+2)Defense consumable
+  Cost-$100
+  Boost-1+ defense
+  Code-DC1''')
