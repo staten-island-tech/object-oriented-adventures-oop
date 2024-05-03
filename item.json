@@ -1,0 +1,14 @@
+[
+    {
+        "name": "Strength Consumable",
+        "strength_boost": "1",
+        "defense_boost": "0",
+        "cost": "100"
+    },
+    {
+        "name": "Defense Consumable",
+        "strength_boost": "0",
+        "defense_boost": "1",
+        "cost": "100"
+    }
+]
