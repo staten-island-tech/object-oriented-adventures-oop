@@ -18,4 +18,15 @@ if x == 'Y':
 2)Defense consumable
   Cost-$100
   Boost-1+ defense
-  Code-DC1''')
+  Code-DC1
+
+3)
+                   
+                   
+                   
+                   
+                   
+                   
+                   
+                   
+                   ''')
