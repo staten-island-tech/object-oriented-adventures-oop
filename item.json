@@ -2,13 +2,41 @@
     {
         "name": "Strength Consumable",
         "strength_boost": "1",
+        "speed_boost": "0",
         "defense_boost": "0",
-        "cost": "100"
+        "cost": "100",
+        "code": "1"
     },
     {
         "name": "Defense Consumable",
         "strength_boost": "0",
+        "speed_boost": "0",
         "defense_boost": "1",
-        "cost": "100"
+        "cost": "100",
+        "code": "2"
+    },
+    {
+        "name": "Speed Consumable",
+        "strength_boost": "0",
+        "speed_boost": "1",
+        "defense_boost": "0",
+        "cost": "100",
+        "code": "3"
+    },
+    {
+        "name": "Iron Armor",
+        "strength_boost": "2",
+        "speed_boost": "1",
+        "defense_boost": "2",
+        "cost": "500",
+        "code": "4"
+    },
+    {
+        "name": "Diamond Armor",
+        "strength_boost": "5",
+        "speed_boost": "3",
+        "defense_boost": "5",
+        "cost": "1500",
+        "code": "5"
     }
 ]

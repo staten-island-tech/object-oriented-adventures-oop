@@ -1,4 +1,8 @@
 import text_functions
+import json
+import os
+with open("player.json", "r") as f:
+    player = json.load(f)  
 t = text_functions.Text
 
 for load in range(3):
@@ -14,19 +18,27 @@ if x == 'Y':
 1)Strength consumable
   Cost-$100
   Boost-1+ strength
-  Code-SC1
+  Code-1
 2)Defense consumable
   Cost-$100
   Boost-1+ defense
-  Code-DC1
+  Code-2
+3)speed consumable
+  Cost-$100
+  Boost-1+ speed
+  Code-3 
+4)Iron armor
+  Cost-500
+  Boost-2+ strength, 2+ defense, 1+ speed
+  code-4
+5)Diamond armor
+ Cost-1500
+ Boost-5+ strength, 5+ defense, 3+speed 
+ Code-5  
+''')
 
-3)
-                   
-                   
-                   
-                   
-                   
-                   
-                   
-                   
-                   ''')
+def Shop(user):
+     for player in player:
+          if user == player['user']:
+               money = player["money"]
+               t.fast_print(f'Your balance is: {money}')
