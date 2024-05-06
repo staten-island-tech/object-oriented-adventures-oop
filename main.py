@@ -1,16 +1,7 @@
 import text_functions
 
 t = text_functions.Text
-t.slow_print('Loading game ...')
-t.delete()
-t.slow_print('Loading game ...')
-t.delete()
-t.slow_print('Loading game ...')
-t.delete()
-t.slow_print('Loading game ...')
-t.delete()
-t.slow_print('Loading game ...')
-t.delete()
+text_functions.Load(5)
 t.fast_print('Welcome to Pythonia! This is where you will start your monster slaying journey.')
 t.fast_print('You will have a choice Between mulitpule classes.')
 t.fast_print('The choises are Mage, Warrior, Tank, and Ace.')
