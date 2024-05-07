@@ -2,6 +2,7 @@ import text_functions
 import json
 import os
 from classes import user
+import random
 
 with open("player.json", "r") as f:
     player = json.load(f)
@@ -17,11 +18,18 @@ These Monsters are strong,
 I suggest training to be able to beat them.''')
 t.delete_all(4)
 
-cont = input('Do you wish to continue? Yes/No')
+cont = input('Do you wish to continue? Yes/No ')
 if cont == ('Yes'):
     print('Starting Encounter')
 
-def encounter(user):
+def encounter():
     for players in player:
         if user == players['user']:
-            
+            power = int(players['levels'])
+            monsterpower = random.randrange(power-1,power+1)
+            for monsters in monster:
+                if monsterpower == int(monsters['monster_level']):
+                    m = monsters['monster']
+                    print(f'You have encountered a {m}')
+
+encounter()
