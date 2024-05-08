@@ -25,10 +25,10 @@
         "user": "willy",
         "exp": 0,
         "levels": 1,
-        "money": 7057,
-        "strength": 10,
-        "defense": 10,
-        "speed": 6,
+        "money": -3000,
+        "strength": 20,
+        "defense": 20,
+        "speed": 12,
         "magic": 6,
         "role": "Mage"
     }

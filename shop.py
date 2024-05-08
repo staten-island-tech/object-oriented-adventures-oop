@@ -4,6 +4,8 @@ import os
 from classes import user
 with open("player.json", "r") as f:
     player = json.load(f)  
+with open("item.json", "r") as f:
+    Items = json.load(f)  
 t = text_functions.Text
 
 for load in range(3):
@@ -42,30 +44,15 @@ def shopping():
   for i in player:
     if user == i['user']:
       y = input(t.fast_print('What item would you like to buy? (use the code provided in the shop): '))
-      if y == ('1'):
-        i.update({'money':int(i['money'])-100})
-        i.update({'strength':int(i['strength'])+1})
-        t.fast_print('Congratulations! You have bought the strength consumable and consumed it for 1+ strength!')
-      elif y == ('2'):
-        i.update({'money':int(i['money'])-100})
-        i.update({'defense':int(i['defense'])+1})
-        t.fast_print('Congratulations! You have bought the defense consumable and consumed it for 1+ defense!')
-      elif y == ('3'):
-        i.update({'money':int(i['money'])-100})
-        i.update({'speed':int(i['speed'])+1})
-        t.fast_print('Congratulations! You have bought the speed consumable and consumed it for 1+ speed!')
-      elif y == ('4'):
-        i.update({'money':int(i['money'])-500})
-        i.update({'strength':int(i['strength'])+2})
-        i.update({'defense':int(i['defense'])+2})
-        i.update({'speed':int(i['speed'])+1})
-        t.fast_print('Congratulations! You have bought the Iron armor and put it on for 2+ strength, 2+ defense, and 1+ speed')
-      elif y == ('5'):
-        i.update({'money':int(i['money'])-1500})
-        i.update({'strength':int(i['strength'])+5})
-        i.update({'defense':int(i['defense'])+5})
-        i.update({'speed':int(i['speed'])+3})
-        t.fast_print('Congratulations! You have bought the diamond armor and put it on for 5+ strength, 5+ defense, and 3+ speed')
+      for j in Items:
+          if y == j['code']:
+             if i['money'] >= j['cost']:
+              i.update({'money':int(i['money'])-int(j['cost'])})
+              i.update({'strength':int(i['strength'])+int(j['strength_boost'])})
+              i.update({'defense':int(i['defense'])+int(j['defense_boost'])})
+              i.update({'speed':int(i['speed'])+int(j['speed_boost'])})
+             else:
+              t.fast_print('you are too broke to buy this please come back later when you have more money!')
 
 shopping()
 
