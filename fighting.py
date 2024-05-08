@@ -22,14 +22,19 @@ cont = input('Do you wish to continue? Yes/No ')
 if cont == ('Yes'):
     print('Starting Encounter')
 
-def encounter():
-    for players in player:
-        if user == players['user']:
-            power = int(players['levels'])
-            monsterpower = random.randrange(power-1,power+1)
-            for monsters in monster:
-                if monsterpower == int(monsters['monster_level']):
-                    m = monsters['monster']
-                    print(f'You have encountered a {m}')
+class Fight():
+    def Encounter():
+        for players in player:
+            if user == players['user']:
+                power = int(players['levels'])
+                monsterpower = random.randrange(power-1,power+1)
+                for monsters in monster:
+                    if monsterpower == int(monsters['monster_level']):
+                        m = monsters['monster']
+                        print(f'You have encountered a {m}')
+                        print(monsters)
+    def squareup():
+        pass
 
-encounter()
+
+Fight.Encounter()
