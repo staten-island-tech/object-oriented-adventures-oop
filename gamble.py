@@ -27,7 +27,7 @@ def Gamble(user):
             number = random.randrange(1,10)
             guess = int(input('What is your guess 1-10? '))
             if number == guess:
-                players.update({'money':int(moolah)+x})
+                players.update({'money':int(moolah)+(2*x)})
                 print('You Win!')
             else:
                 players.update({'money':int(moolah)-x})

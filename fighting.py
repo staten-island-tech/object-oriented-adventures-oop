@@ -10,6 +10,10 @@ with open("player.json", "r") as f:
 with open("monster.json", "r") as f:
     monster = json.load(f)
 
+with open("moves.json", "r") as f:
+    moves = json.load(f)
+
+
 text_functions.Load(3)
 t = text_functions.Text
 t.fast_print('''This is the fighting system.
@@ -23,18 +27,23 @@ if cont == ('Yes'):
     print('Starting Encounter')
 
 class Fight():
-    def Encounter():
+    def __init__(self):
         for players in player:
             if user == players['user']:
                 power = int(players['levels'])
                 monsterpower = random.randrange(power-1,power+1)
                 for monsters in monster:
                     if monsterpower == int(monsters['monster_level']):
-                        m = monsters['monster']
-                        print(f'You have encountered a {m}')
+                        self.m = monsters['monster']
+                        print(f'You have encountered a {self.m}')
                         print(monsters)
     def squareup():
-        pass
+        for players in player:
+            if user == players['user']:
+                for mo in moves:
+                    if int(mo['level']) <= int(players['levels']):
+                        print(mo)
+        
 
 
-Fight.Encounter()
+Fight()
