@@ -25,11 +25,22 @@
         "user": "willy",
         "exp": 0,
         "levels": 1,
-        "money": -3000,
-        "strength": 20,
-        "defense": 20,
-        "speed": 12,
+        "money": 0,
+        "strength": 25,
+        "defense": 25,
+        "speed": 15,
         "magic": 6,
+        "role": "Mage"
+    },
+    {
+        "user": "Matty",
+        "exp": 0,
+        "levels": 1,
+        "money": 8499,
+        "strength": 5,
+        "defense": 5,
+        "speed": 3,
+        "magic": 5,
         "role": "Mage"
     }
 ]

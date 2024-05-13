@@ -1,5 +1,8 @@
 import json
 import os
+import text_functions
+import time 
+t = text_functions.Text
 
 
 with open("player.json", "r") as f:
@@ -23,8 +26,8 @@ def convert(user,exp,levels,money,strength,defense,speed,magic,role):
     new_player = Convert(user,exp,levels,money,strength,defense,speed,magic,role)
     player.append(new_player.__dict__)
 
-login = input('Are you logging in or signing up ')
-if login == 'Sign Up':
+login = input('Are you logging in or signing up? ').upper()
+if 'S' in login:
     user = input('Enter a username: ')
     gooduser = ('NotGood')
     while gooduser != ('Good'):
@@ -42,11 +45,16 @@ if login == 'Sign Up':
         convert(user,0,1,0,0,5,0,0,y)
     elif y ==('Mage'):
         convert(user,0,1,0,0,0,0,5,y)
-else:
+elif 'L' in login:
     user = input('Enter a username: ')
     for players in player:
         if user == players['user']:
             print('Logged in')
+            
+t.delete_all(10)
+t.slow_print('Logged in!')
+time.sleep(1)
+t.delete()
 
 new_file = "updated.json"
 with open(new_file, "w") as f:
