@@ -18,7 +18,7 @@ Train
 Shop
 ''')
 if action == 'Fight':
-    import fight
+    import fighting
 elif action == 'Train':
     import training
 elif action == 'Shop':

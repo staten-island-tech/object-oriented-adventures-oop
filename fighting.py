@@ -26,24 +26,23 @@ cont = input('Do you wish to continue? Yes/No ')
 if cont == ('Yes'):
     print('Starting Encounter')
 
-class Fight():
-    def __init__(self):
-        for players in player:
-            if user == players['user']:
-                power = int(players['levels'])
-                monsterpower = random.randrange(power-1,power+1)
-                for monsters in monster:
-                    if monsterpower == int(monsters['monster_level']):
-                        self.m = monsters['monster']
-                        print(f'You have encountered a {self.m}')
-                        print(monsters)
-    def squareup():
-        for players in player:
-            if user == players['user']:
-                for mo in moves:
-                    if int(mo['level']) <= int(players['levels']):
-                        print(mo)
+def encounter():
+    for players in player:
+        if user == players['user']:
+            power = int(players['levels'])
+            monsterpower = random.randrange(power-1,power+1)
+            m = monster[monsterpower]
+            mname = m['monster']
+            print(f'You have encountered a {mname}')
+            print(m)
+            return m
+def squareup():
+    m = encounter()
+    for players in player:
+        if user == players['user']:
+            [print(moves[i]) for i in range(0,int(players['levels']))]
+            move = input('What move would you like to use? ')
+            
         
 
-
-Fight()
+squareup()
