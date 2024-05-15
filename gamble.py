@@ -21,19 +21,23 @@ You can only lost 100 percent of your money, you can win 2000 percent of it back
 t.delete_all(5)
 
 def Gamble(user):
-    for players in player:
-        if user == players['user']:
-            moolah = players['money']
-            print(f'Your Balance is {moolah}')
-            x = int(input('How much money are you going to gamble? '))
-            number = random.randrange(1,10)
-            guess = int(input('What is your guess 1-10? '))
-            if number == guess:
-                players.update({'money':int(moolah)+x})
-                print('You Win!')
-            else:
-                players.update({'money':int(moolah)-x})
-                print('Wa Wa You Lose')
+    y = input(t.fast_print('Would you like to Begin Gambling? [Y/N]: ')).upper()
+    if y == ('Y'):
+        for players in player:
+            if user == players['user']:
+                moolah = players['money']
+                print(f'Your Balance is {moolah}')
+                x = int(input('How much money are you going to gamble? '))
+                number = random.randrange(1,10)
+                guess = int(input('What is your guess 1-10? '))
+                if number == guess:
+                    players.update({'money':int(moolah)+x})
+                    print('You Win!')
+                else:
+                    players.update({'money':int(moolah)-x})
+                    print('Wa Wa You Lose')
+    else:
+        t.fast_print('Please come back later')
 
 
 Gamble(user)
