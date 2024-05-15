@@ -2,6 +2,7 @@ import random
 import text_functions
 import json
 import os
+import time
 from classes import user
 
 with open("player.json", "r") as f:
@@ -16,6 +17,7 @@ You can insert a certain amount of coins to win more!
 But be careful, you could lose it all anytime.
 Just remember 99 percent of gamblers stop before they win big.
 You can only lost 100 percent of your money, you can win 2000 percent of it back.''')
+time.sleep(3)
 t.delete_all(5)
 
 def Gamble(user):
