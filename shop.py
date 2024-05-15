@@ -51,6 +51,7 @@ def shopping():
               i.update({'strength':int(i['strength'])+int(j['strength_boost'])})
               i.update({'defense':int(i['defense'])+int(j['defense_boost'])})
               i.update({'speed':int(i['speed'])+int(j['speed_boost'])})
+              t.fast_print('Congratulations on buying your item!')
              elif int(i['money']) <= int(j['cost']):
               t.fast_print('you are too broke to buy this please come back later when you have more money!')
 
