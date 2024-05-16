@@ -30,29 +30,40 @@ for p in player:
     if user == p['user']:
         play = p
 
-class Fight():
-    def encounter():
-        power = int(play['levels'])
-        monsterpower = random.randrange(power-1,power+1)
-        m = monster[monsterpower]
-        mname = m['monster']
-        print(f'You have encountered a {mname}')
-        return m
-    def playermove(health):
-        for i in moves:
-            if int(i['level']) <= int(play['levels']):
-                print(i)
-        move = input('What move would you like to use? ')
-        for i in moves:
-            if move == i['name']:
-                mhpleft = (health - int(i['power']))
-                return int(mhpleft)
-    def monstermove(health):
-        m = Fight.encounter()
-        phpleft = (health - int(m['attack_strength']))
-        return int(phpleft)
+def encounter():
+    power = int(play['levels'])
+    monsterpower = random.randrange(power-1,power+1)
+    m = monster[monsterpower]
+    mname = m['monster']
+    print(f'You have encountered a {mname}')
+    return m
 
-while Fight.monstermove() > 0:
-    m = Fight.encounter()
-    if p['speed'] >= m['speed']:
-        
+m = encounter()
+
+def playermove(health):
+    for i in moves:
+        if int(i['level']) <= int(play['levels']):
+            print(i)
+    move = input('What move would you like to use? ')
+    for i in moves:
+        if move == i['name']:
+            mhpleft = (health - int(i['power']))
+            return int(mhpleft)
+
+def monstermove(health):
+    phpleft = (health - int(m['attack_strength']))
+    return int(phpleft)
+
+mhp = int(m['health_level'])
+mad = int(m['attack_strength'])
+php = (100+int(play['defense']))
+print(mhp)
+print(php)
+while mhp > 0 and php > 0:
+    if int(p['speed']) >= int(m['speed']):
+        mhp = playermove(mhp)
+        print(mhp)
+    else:
+        php = monstermove(php)
+        print(f'You have been hit with {mad} damage')
+        print(f'You have {php} health left')
