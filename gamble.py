@@ -26,17 +26,17 @@ def Gamble(user):
         for players in player:
             if user == players['user']:
                 moolah = players['money']
-                print(f'Your Balance is {moolah}')
-                x = int(input('How much money are you going to gamble? '))
+                t.fast_print(f'Your Balance is {moolah}')
+                x = int(input(t.fast_print('How much money are you going to gamble? ')))
                 number = random.randrange(1,10)
-                guess = int(input('What is your guess 1-10? '))
+                guess = int(input(t.fast_print('What is your guess 1-10? ')))
                 if number == guess:
                     players.update({'money':int(moolah)+x})
-                    print('You Win!')
+                    t.fast_print('You Win!')
                     y = input(t.fast_print('Would you like to continue Gambling? [Y/N]: ')).upper()
                 else:
                     players.update({'money':int(moolah)-x})
-                    print('Wa Wa You Lose')
+                    t.fast_print('Wa Wa You Lose')
                     y = input(t.fast_print('Would you like to continue Gambling? [Y/N]: ')).upper()
 
 
