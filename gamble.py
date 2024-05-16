@@ -2,6 +2,7 @@ import random
 import text_functions
 import json
 import os
+import time
 from classes import user
 
 with open("player.json", "r") as f:
@@ -18,11 +19,12 @@ You can insert a certain amount of coins to win more!
 But be careful, you could lose it all anytime.
 Just remember 99 percent of gamblers stop before they win big.
 You can only lost 100 percent of your money, you can win 2000 percent of it back.''')
+time.sleep(3)
 t.delete_all(5)
 
 def Gamble(user):
     y = input(t.fast_print('Would you like to Begin Gambling? [Y/N]: ')).upper()
-    if y == ('Y'):
+    while y == ('Y'):
         for players in player:
             if user == players['user']:
                 moolah = players['money']
@@ -33,11 +35,11 @@ def Gamble(user):
                 if number == guess:
                     players.update({'money':int(moolah)+x})
                     print('You Win!')
+                    y = input(t.fast_print('Would you like to continue Gambling? [Y/N]: ')).upper()
                 else:
                     players.update({'money':int(moolah)-x})
                     print('Wa Wa You Lose')
-    else:
-        t.fast_print('Please come back later')
+                    y = input(t.fast_print('Would you like to continue Gambling? [Y/N]: ')).upper()
 
 
 Gamble(user)
