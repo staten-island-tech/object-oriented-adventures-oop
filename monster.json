@@ -1,0 +1,74 @@
+[
+    {
+        "monster": "Zombie",
+        "monster_level": "1",
+        "attack_strength": "20",
+        "health_level": "30",
+        "speed": "1",
+        "experince_dropped": "5",
+        "money_dropped": "5"
+    },
+    {
+        "monster": "Skeleton",
+        "monster_level": "2",
+        "attack_strength": "40",
+        "health_level": "60",
+        "speed": "2",
+        "experince_dropped": "10",
+        "money_dropped": "10"
+    },
+    {
+        "monster": "Ghost",
+        "monster_level": "3",
+        "attack_strength": "65",
+        "health_level": "70",
+        "speed": "4",
+        "experince_dropped": "15",
+        "money_dropped": "15"
+    },
+    {
+        "monster": "Ghoul",
+        "monster_level": "5",
+        "attack_strength": "100",
+        "health_level": "100",
+        "speed": "4",
+        "experince_dropped": "30",
+        "money_dropped": "25"
+    },
+    {
+        "monster": "Spider",
+        "monster_level": "5",
+        "attack_strength": "90",
+        "health_level": "110",
+        "speed": "6",
+        "experince_dropped": "40",
+        "money_dropped": "35"
+    },
+    {
+        "monster": "Pirate",
+        "monster_level": "6",
+        "attack_strength": "120",
+        "health_level": "200",
+        "speed": "5",
+        "experince_dropped": "50",
+        "money_dropped": "50"
+    },
+    {
+        "monster": "Chupacabra",
+        "monster_level": "7",
+        "attack_strength": "140",
+        "health_level": "250",
+        "speed": "5",
+        "experince_dropped": "60",
+        "money_dropped": "70"
+    },
+    {
+        "monster": "Creeper",
+        "monster_level": "3",
+        "attack_strength": "1000",
+        "health_level": "100",
+        "speed": "4",
+        "experince_dropped": "15",
+        "money_dropped": "10"
+    }
+]
