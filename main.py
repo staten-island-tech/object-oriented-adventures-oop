@@ -17,6 +17,7 @@ action = input(t.fast_print('''What is your next course of action?
 Fight
 Gamble
 Shop
+Train
 ''')).upper()
 
 if 'F' in action:
@@ -27,3 +28,6 @@ elif 'S' in action:
 elif 'G' in action:
     from gamble import Gamble
     Gamble()
+elif 'T' in action:
+    from training import Training
+    Training()

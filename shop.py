@@ -8,10 +8,8 @@ with open("item.json", "r") as f:
     Items = json.load(f)  
 t = text_functions.Text
 
-for load in range(3):
-    t.slow_print('Loading Shop...')
-    t.delete()
 
+t.Load(3)
 t.fast_print('Welcome to the game shop!')
 x = input(t.fast_print('Would you like to buy an item?: [Y/N]')).upper()
 t.delete_all(3)

@@ -34,13 +34,13 @@
     },
     {
         "user": "Matty",
-        "exp": 0,
+        "exp": 650,
         "levels": 1,
         "money": 0,
-        "strength": 10,
-        "defense": 10,
-        "speed": 6,
-        "magic": 5,
+        "strength": 4,
+        "defense": 0,
+        "speed": 1,
+        "magic": 0,
         "role": "Mage"
     }
 ]

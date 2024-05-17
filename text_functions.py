@@ -25,7 +25,7 @@ class Text():
             sys.stdout.write('\x1b[2K')
             i += 1
 
-def Load(x):
-    for i in range(x):
-        Text.slow_print('Loading...')
-        Text.delete()
+    def Load(x):
+        for i in range(x):
+            Text.slow_print('Loading...')
+            Text.delete()

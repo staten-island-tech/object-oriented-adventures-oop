@@ -11,7 +11,7 @@ with open("player.json", "r") as f:
 
 t = text_functions.Text
 t.delete_all(3)
-text_functions.Load(3)
+t.Load(3)
 t.fast_print('''This is the gambling room.
 You can insert a certain amount of coins to win more!
 But be careful, you could lose it all anytime.
