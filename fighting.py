@@ -36,6 +36,7 @@ def encounter():
     m = monster[monsterpower]
     mname = m['monster']
     print(f'You have encountered a {mname}')
+    print(m)
     return m
 
 m = encounter()
@@ -59,11 +60,17 @@ mad = int(m['attack_strength'])
 php = (100+int(play['defense']))
 print(mhp)
 print(php)
+
+if int(p['speed']) >= int(m['speed']):
+    mhp = playermove(mhp)
 while mhp > 0 and php > 0:
-    if int(p['speed']) >= int(m['speed']):
+    php = monstermove(php)
+    print(f'You have been hit with {mad} damage')
+    print(f'You have {php} health left')
+    if mhp > 0 and php > 0:
         mhp = playermove(mhp)
-        print(mhp)
+        print(f'The monster has {mhp} health left')
     else:
-        php = monstermove(php)
-        print(f'You have been hit with {mad} damage')
-        print(f'You have {php} health left')
+        print('RIP you died, ending encounter')
+print('You have finished the encounter!')
+play.update('exp':play)
