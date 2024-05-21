@@ -1,5 +1,8 @@
 import json
 import os
+import text_functions
+import time 
+t = text_functions.Text
 
 
 with open("player.json", "r") as f:
@@ -23,8 +26,17 @@ def convert(user,exp,levels,money,strength,defense,speed,magic,role):
     new_player = Convert(user,exp,levels,money,strength,defense,speed,magic,role)
     player.append(new_player.__dict__)
 
-login = input('Are you logging in or signing up ')
-if login == 'Sign Up':
+login = input('Are you logging in or signing up? ').upper()
+if 'S' in login: 
+    text_functions.Load(5)
+    t.fast_print('Welcome to Pythonia! This is where you will start your monster slaying journey.')
+    t.fast_print('You will have a choice Between mulitpule classes.')
+    t.fast_print('The choises are Mage, Warrior, Tank, and Ace.')
+    t.fast_print('Mages have increased magic stats and magic powers.')
+    t.fast_print('Warriors have increased strength and attack power')
+    t.fast_print('Tanks have increased health and defensive stats')
+    t.fast_print('Please select your class next')
+    t.delete_all(8)
     user = input('Enter a username: ')
     gooduser = ('NotGood')
     while gooduser != ('Good'):
@@ -42,11 +54,16 @@ if login == 'Sign Up':
         convert(user,0,1,0,0,5,0,0,y)
     elif y ==('Mage'):
         convert(user,0,1,0,0,0,0,5,y)
-else:
+elif 'L' in login:
     user = input('Enter a username: ')
     for players in player:
         if user == players['user']:
             print('Logged in')
+            
+t.delete_all(10)
+t.slow_print('Logged in!')
+time.sleep(1)
+t.delete()
 
 new_file = "updated.json"
 with open(new_file, "w") as f:

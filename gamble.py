@@ -2,6 +2,7 @@ import random
 import text_functions
 import json
 import os
+import time
 from classes import user
 
 with open("player.json", "r") as f:
@@ -10,31 +11,41 @@ with open("player.json", "r") as f:
 
 t = text_functions.Text
 t.delete_all(3)
-text_functions.Load(3)
+t.Load(3)
 t.fast_print('''This is the gambling room.
 You can insert a certain amount of coins to win more!
 But be careful, you could lose it all anytime.
 Just remember 99 percent of gamblers stop before they win big.
 You can only lost 100 percent of your money, you can win 2000 percent of it back.''')
+time.sleep(2)
 t.delete_all(5)
 
-def Gamble(user):
-    for players in player:
-        if user == players['user']:
-            moolah = players['money']
-            print(f'Your Balance is {moolah}')
-            x = int(input('How much money are you going to gamble? '))
-            number = random.randrange(1,10)
-            guess = int(input('What is your guess 1-10? '))
-            if number == guess:
-                players.update({'money':int(moolah)+(2*x)})
-                print('You Win!')
-            else:
-                players.update({'money':int(moolah)-x})
-                print('Wa Wa You Lose')
+def Gamble():
+    y = input(t.fast_print('Would you like to Begin Gambling? [Y/N]: ')).upper()
+    while y == ('Y'):
+        for players in player:
+            if user == players['user']:
+                moolah = players['money']
+                t.fast_print(f'Your Balance is {moolah}')
+                x = int(input(t.fast_print('How much money are you going to gamble? ')))
+                if int(x) <= int(players['money']):
+                    number = random.randrange(1,10)
+                    guess = int(input(t.fast_print('What is your guess 1-10? ')))
+                    if number == guess:
+                        players.update({'money':int(moolah)+x})
+                        t.fast_print('You Win!')
+                        y = input(t.fast_print('Would you like to continue Gambling? [Y/N]: ')).upper()
+                    else:
+                        players.update({'money':int(moolah)-x})
+                        t.fast_print('Wa Wa You Lose')
+                        y = input(t.fast_print('Would you like to continue Gambling? [Y/N]: ')).upper()
+                elif int(x) > int(players['money']):
+                    t.fast_print('Sorry you are too broke to gamble this amount of money please come back later when you have enough.')
+                    time.sleep(1)
+                    y = input(t.fast_print('Would you like to continue Gambling? [Y/N]: ')).upper()
 
 
-Gamble(user)
+Gamble()
 
 new_file = "updated.json"
 with open(new_file, "w") as f:
