@@ -14,7 +14,7 @@ with open("moves.json", "r") as f:
     moves = json.load(f)
 
 
-text_functions.Load(3)
+text_functions.Text.Load(3)
 t = text_functions.Text
 t.fast_print('''This is the fighting system.
 You can fight monsters to level up and gain money.
@@ -71,9 +71,14 @@ while mhp > 0 and php > 0:
         mhp = playermove(mhp)
         print(f'The monster has {mhp} health left')
     else:
-        print('RIP you died, ending encounter')
+        if mhp <= 0:
+            play.update({'exp':(int(play['exp'])+int(m['experince_dropped']))})
+            play.update({'levels':(int(play['exp'])//20+1)})
+        else:
+            print('RIP you died, ending encounter')
 print('You have finished the encounter!')
-play.update({'exp':(int(play['exp'])+int(m['experince_dropped']))})
+
+
 
 new_file = "updated.json"
 with open(new_file, "w") as f:

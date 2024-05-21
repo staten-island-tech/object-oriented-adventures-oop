@@ -1,1 +1,35 @@
-[{"user": "wilson", "exp": 100, "levels": 100, "money": 999, "strength": 999, "defense": 999, "speed": 999, "magic": 999, "role": "admin"}, {"user": "hi", "exp": 0, "levels": 1, "money": 0, "strength": 6, "defense": 0, "speed": 0, "magic": 0, "role": "Warrior"}, {"user": "willy", "exp": 5, "levels": 1, "money": 0, "strength": 10, "defense": 10, "speed": 10, "magic": 6, "role": "Mage"}]
+[
+    {
+        "user": "wilson",
+        "exp": 100,
+        "levels": 100,
+        "money": 999,
+        "strength": 999,
+        "defense": 999,
+        "speed": 999,
+        "magic": 999,
+        "role": "admin"
+    },
+    {
+        "user": "hi",
+        "exp": 0,
+        "levels": 1,
+        "money": 0,
+        "strength": 6,
+        "defense": 0,
+        "speed": 0,
+        "magic": 0,
+        "role": "Warrior"
+    },
+    {
+        "user": "willy",
+        "exp": 45,
+        "levels": 3,
+        "money": 0,
+        "strength": 10,
+        "defense": 10,
+        "speed": 10,
+        "magic": 6,
+        "role": "Mage"
+    }
+]
