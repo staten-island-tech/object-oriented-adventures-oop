@@ -73,4 +73,12 @@ while mhp > 0 and php > 0:
     else:
         print('RIP you died, ending encounter')
 print('You have finished the encounter!')
-play.update('exp':play)
+play.update({'exp':(int(play['exp'])+int(m['experince_dropped']))})
+
+new_file = "updated.json"
+with open(new_file, "w") as f:
+    json_string = json.dumps(player, indent=4)
+    f.write(json_string)
+
+os.remove("player.json")
+os.rename(new_file, "player.json")
