@@ -67,9 +67,8 @@ def Training():
                             t.fast_print('You do not have enough experince points to train please come back later when you have more')
                             time.sleep(1)
                             t.delete_all(3)
-                            y = 'N'
-
-Training()
+    else:
+        t.fast_print('Thanks for coming I guess?')
 
 new_file = "updated.json"
 with open(new_file, "w") as f:

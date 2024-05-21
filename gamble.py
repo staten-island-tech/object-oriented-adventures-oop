@@ -44,9 +44,6 @@ def Gamble():
                     time.sleep(1)
                     y = input(t.fast_print('Would you like to continue Gambling? [Y/N]: ')).upper()
 
-
-Gamble()
-
 new_file = "updated.json"
 with open(new_file, "w") as f:
     json_string = json.dumps(player, indent=4)
