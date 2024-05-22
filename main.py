@@ -16,7 +16,7 @@ with open("moves.json", "r") as f:
 
 
 action = m.Action()
-while 'E' not in action:
+while 'Exit' not in action:
     if 'F' in action:
         import fighting
     elif 'S' in action:
