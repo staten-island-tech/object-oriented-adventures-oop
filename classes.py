@@ -18,6 +18,7 @@ class Main_functions():
     Exit Game ''')).upper()
         time.sleep(1)
         t.delete_all(10)
+        return action
 
 class Convert():
     def __init__(data,user,exp,levels,money,strength,defense,speed,magic,role):
