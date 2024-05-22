@@ -48,7 +48,10 @@ def playermove(health):
     move = input('What move would you like to use? ')
     for i in moves:
         if move == i['name']:
-            mhpleft = (health - int(i['power']))
+            if i['movetype'] == 'Magic':
+                mhpleft = (health - (int(i['power'])+5*int(play['magic'])))
+            else:
+                mhpleft = (health - (int(i['power'])+5*int(play['strength'])))
             return int(mhpleft)
 
 def monstermove(health):

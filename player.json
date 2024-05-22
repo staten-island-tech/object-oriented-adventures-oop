@@ -23,13 +23,13 @@
     },
     {
         "user": "willy",
-        "exp": 45,
+        "exp": 0,
         "levels": 3,
         "money": 0,
-        "strength": 10,
-        "defense": 10,
+        "strength": 19,
+        "defense": 20,
         "speed": 10,
         "magic": 6,
-        "role": "Mage"
+        "role": "Warrior"
     }
 ]
