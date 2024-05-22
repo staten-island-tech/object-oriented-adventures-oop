@@ -8,6 +8,17 @@ t = text_functions.Text
 with open("player.json", "r") as f:
     player = json.load(f)
 
+class Main_functions():
+    def Action():
+        action = input(t.fast_print('''What is your next course of action?
+    Fight
+    Gamble
+    Shop
+    Train
+    Exit Game ''')).upper()
+        time.sleep(1)
+        t.delete_all(10)
+
 class Convert():
     def __init__(data,user,exp,levels,money,strength,defense,speed,magic,role):
         data.user = user
