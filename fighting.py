@@ -5,6 +5,7 @@ from classes import user
 import random
 import time
 
+
 with open("player.json", "r") as f:
     player = json.load(f)
 
@@ -26,6 +27,9 @@ t.delete_all(4)
 cont = input(t.fast_print('Do you wish to continue? [Y/N] ')).lower().capitalize()
 if cont == ('Y'):
     t.fast_print('Starting Encounter')
+else:
+    t.fast_print('Too bad you are either way')
+time.sleep(.5)
 
 for p in player:
     if user == p['user']:
@@ -83,6 +87,7 @@ while int(mhp) > 0 and int(php) > 0:
 t.fast_print('You have finished the encounter!')
 time.sleep(1.5)
 t.delete_all(100)
+
 
 new_file = "updated.json"
 with open(new_file, "w") as f:
