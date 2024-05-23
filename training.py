@@ -68,7 +68,7 @@ def Training():
                             time.sleep(1)
                             t.delete_all(3)
     else:
-        t.fast_print('Thanks for coming I guess?')
+        t.fast_print('Thanks for coming please come back later!')
 
 new_file = "updated.json"
 with open(new_file, "w") as f:

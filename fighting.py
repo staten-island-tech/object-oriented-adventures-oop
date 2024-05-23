@@ -3,6 +3,7 @@ import json
 import os
 from classes import user
 import random
+import time
 
 with open("player.json", "r") as f:
     player = json.load(f)
@@ -13,18 +14,18 @@ with open("monster.json", "r") as f:
 with open("moves.json", "r") as f:
     moves = json.load(f)
 
-
 text_functions.Text.Load(3)
 t = text_functions.Text
 t.fast_print('''This is the fighting system.
 You can fight monsters to level up and gain money.
 These Monsters are strong, 
 I suggest training to be able to beat them.''')
+time.sleep(2)
 t.delete_all(4)
 
-cont = input('Do you wish to continue? Yes/No ')
-if cont == ('Yes'):
-    print('Starting Encounter')
+cont = input(t.fast_print('Do you wish to continue? [Y/N] ')).lower().capitalize()
+if cont == ('Y'):
+    t.fast_print('Starting Encounter')
 
 for p in player:
     if user == p['user']:
@@ -35,7 +36,7 @@ def encounter():
     monsterpower = random.randrange(power-1,power+1)
     m = monster[monsterpower]
     mname = m['monster']
-    print(f'You have encountered a {mname}')
+    t.fast_print(f'You have encountered a {mname}')
     print(m)
     return m
 
@@ -45,7 +46,7 @@ def playermove(health):
     for i in moves:
         if int(i['level']) <= int(play['levels']):
             print(i)
-    move = input('What move would you like to use? ')
+    move = input(t.fast_print('What move would you like to use? '))
     for i in moves:
         if move == i['name']:
             if i['movetype'] == 'Magic':
@@ -66,22 +67,22 @@ print(php)
 
 if int(p['speed']) >= int(m['speed']):
     mhp = playermove(mhp)
-while mhp > 0 and php > 0:
+while int(mhp) > 0 and int(php) > 0:
     php = monstermove(php)
-    print(f'You have been hit with {mad} damage')
-    print(f'You have {php} health left')
+    t.fast_print(f'You have been hit with {mad} damage')
+    t.fast_print(f'You have {php} health left')
     if mhp > 0 and php > 0:
         mhp = playermove(mhp)
-        print(f'The monster has {mhp} health left')
+        t.fast_print(f'The monster has {mhp} health left')
     else:
         if mhp <= 0:
             play.update({'exp':(int(play['exp'])+int(m['experince_dropped']))})
             play.update({'levels':(int(play['exp'])//20+1)})
         else:
-            print('RIP you died, ending encounter')
-print('You have finished the encounter!')
-
-
+            t.fast_print('RIP you died, ending encounter')
+t.fast_print('You have finished the encounter!')
+time.sleep(1.5)
+t.delete_all(100)
 
 new_file = "updated.json"
 with open(new_file, "w") as f:

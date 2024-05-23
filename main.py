@@ -3,7 +3,6 @@ import os
 import text_functions
 import time
 import classes
-from classes import Main_functions as m
 t = text_functions.Text
 with open("player.json", "r") as f:
     player = json.load(f)
@@ -14,18 +13,31 @@ with open("monster.json", "r") as f:
 with open("moves.json", "r") as f:
     moves = json.load(f)
 
+def action():
+        action = input(t.fast_print('''What is your next course of action?
+Fight
+Gamble
+Shop
+Train
+Exit Game ''')).lower().capitalize()
+        time.sleep(1)
+        t.delete_all(10)
+        return action
 
-action = m.Action()
-while 'Exit' not in action:
-    if 'F' in action:
+a = action()
+
+while 'E' not in a:
+    if 'F' in a:
         import fighting
-    elif 'S' in action:
+    elif 'S' in a:
         import shop
-    elif 'G' in action:
+        shop.shopping()
+    elif 'G' in a:
         import gamble
-    elif 'T' in action:
+        gamble.Gamble()
+    elif 'T' in a:
         import training
-    action = m.Action()
+        training.Training()
+    a = action()
 
-if 'E' in action:
-    t.fast_print('Thanks for playing the game and come back later!')
+t.fast_print('Thanks for playing the game and come back later!')

@@ -43,6 +43,8 @@ def Gamble():
                     t.fast_print('Sorry you are too broke to gamble this amount of money please come back later when you have enough.')
                     time.sleep(1)
                     y = input(t.fast_print('Would you like to continue Gambling? [Y/N]: ')).upper()
+    if y == ('N'):
+        t.fast_print('Thank you for coming to the gambling room please come back later!')
 
 new_file = "updated.json"
 with open(new_file, "w") as f:
