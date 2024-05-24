@@ -14,15 +14,16 @@ with open("moves.json", "r") as f:
     moves = json.load(f)
 
 def action():
-        action = input(t.fast_print('''What is your next course of action?
+    action = input(t.fast_print('''What is your next course of action?
 Fight
 Gamble
 Shop
 Train
-Exit Game ''')).lower().capitalize()
-        time.sleep(1)
-        t.delete_all(10)
-        return action
+Exit Game''')).lower().capitalize()
+    time.sleep(1)
+    t.delete_all(10)
+    print("You're next course of action is", action)
+    return action
 
 a = action()
 

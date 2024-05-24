@@ -37,6 +37,7 @@ if 'S' in login:
     t.fast_print('Tanks have increased health and defensive stats')
     t.fast_print('Please select your class next')
     t.delete_all(8)
+    time.sleep(3)
     user = input('Enter a username: ')
     gooduser = ('NotGood')
     while gooduser != ('Good'):

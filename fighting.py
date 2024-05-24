@@ -1,7 +1,7 @@
 import text_functions
 import json
 import os
-from classes import user
+from classes import *
 import random
 import time
 
