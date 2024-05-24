@@ -18,7 +18,7 @@ def Training():
     y = input(t.fast_print('Would you like to train? [Y/N]: ')).upper()
     t.delete_all(2)
     if y == 'Y':
-        t.fast_print('Training each skill takes 5 experince points and returns one point for that skill.')
+        t.fast_print('Training each skill takes 50 experince points and returns one point for that skill.')
         time.sleep(1.5)
         t.delete_all(3)
         while y == 'Y':

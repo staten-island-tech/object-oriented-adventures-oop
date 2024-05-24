@@ -31,13 +31,10 @@ while 'E' not in a:
         import fighting
     elif 'S' in a:
         import shop
-        shop.shopping()
     elif 'G' in a:
         import gamble
-        gamble.Gamble()
     elif 'T' in a:
         import training
-        training.Training()
     a = action()
 
 t.fast_print('Thanks for playing the game and come back later!')
