@@ -1,7 +1,7 @@
 import json
 import os
 import time
-from classes import user
+from Login_signup import user
 import text_functions
 with open("player.json", "r") as f:
     player = json.load(f)  

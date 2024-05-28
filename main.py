@@ -2,7 +2,6 @@ import json
 import os
 import text_functions
 import time
-import classes
 t = text_functions.Text
 with open("player.json", "r") as f:
     player = json.load(f)
@@ -20,22 +19,20 @@ Gamble
 Shop
 Train
 Exit Game''')).lower().capitalize()
+    a = action()
     time.sleep(1)
     t.delete_all(10)
-    print("You're next course of action is", action)
-    return action
+    while 'E' not in a:
+        if 'F' in a:
+            import fighting
+        elif 'S' in a:
+            import shop
+        elif 'G' in a:
+            import gamble
+        elif 'T' in a:
+            import training
+        action()
+    t.fast_print('Thanks for playing the game and come back later!')
 
-a = action()
-
-while 'E' not in a:
-    if 'F' in a:
-        import fighting
-    elif 'S' in a:
-        import shop
-    elif 'G' in a:
-        import gamble
-    elif 'T' in a:
-        import training
-    a = action()
-
-t.fast_print('Thanks for playing the game and come back later!')
+import Login_signup
+action()

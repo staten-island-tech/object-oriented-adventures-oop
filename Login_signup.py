@@ -27,17 +27,17 @@ def convert(user,exp,levels,money,strength,defense,speed,magic,role):
     player.append(new_player.__dict__)
 
 login = input('Are you logging in or signing up? ').upper()
+t.delete()
 if 'S' in login: 
-    t.Load(5)
+    t.Load(1)
     t.fast_print('Welcome to Pythonia! This is where you will start your monster slaying journey.')
     t.fast_print('You will have a choice Between mulitpule classes.')
     t.fast_print('The choises are Mage, Warrior, Tank, and Ace.')
     t.fast_print('Mages have increased magic stats and magic powers.')
     t.fast_print('Warriors have increased strength and attack power')
     t.fast_print('Tanks have increased health and defensive stats')
-    t.fast_print('Please select your class next')
-    t.delete_all(8)
-    time.sleep(3)
+    input(t.fast_print('Click enter when you are ready to select your username and class'))
+    t.delete_all(10)
     user = input('Enter a username: ')
     gooduser = ('NotGood')
     while gooduser != ('Good'):
@@ -56,6 +56,11 @@ if 'S' in login:
         convert(user,0,1,0,0,5,0,0,y)
     elif y ==('Mage'):
         convert(user,0,1,0,0,0,0,5,y)
+    t.fast_print('Congrats on joining the game!')
+    time.sleep(1)
+    t.delete_all(30)
+
+    
 elif 'L' in login:
     user = input('Enter a username: ')
     for players in player:
