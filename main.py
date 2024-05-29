@@ -19,19 +19,17 @@ Gamble
 Shop
 Train
 Exit Game''')).lower().capitalize()
-    a = action()
     time.sleep(1)
     t.delete_all(10)
-    while 'E' not in a:
-        if 'F' in a:
+    while 'E' not in action:
+        if 'F' in action:
             import fighting
-        elif 'S' in a:
+        elif 'S' in action:
             import shop
-        elif 'G' in a:
+        elif 'G' in action:
             import gamble
-        elif 'T' in a:
+        elif 'T' in action:
             import training
-        action()
     t.fast_print('Thanks for playing the game and come back later!')
 
 import Login_signup

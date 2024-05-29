@@ -87,6 +87,7 @@ while int(mhp) > 0 and int(php) > 0:
 t.fast_print('You have finished the encounter!')
 time.sleep(1.5)
 t.delete_all(100)
+from main import action 
 
 
 new_file = "updated.json"

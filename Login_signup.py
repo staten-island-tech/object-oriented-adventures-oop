@@ -29,7 +29,7 @@ def convert(user,exp,levels,money,strength,defense,speed,magic,role):
 login = input('Are you logging in or signing up? ').upper()
 t.delete()
 if 'S' in login: 
-    t.Load(1)
+    t.Load(3)
     t.fast_print('Welcome to Pythonia! This is where you will start your monster slaying journey.')
     t.fast_print('You will have a choice Between mulitpule classes.')
     t.fast_print('The choises are Mage, Warrior, Tank, and Ace.')
