@@ -65,7 +65,10 @@ elif 'L' in login:
     user = input('Enter a username: ')
     for players in player:
         if user == players['user']:
-            print('Logged in')
+            t.fast_print('Logged in')
+        elif user != players['user']:
+            t.fast_print('That is an invalid login please enter a valid username.')
+            user = input('Enter a username: ')
             
 t.delete_all(10)
 t.slow_print('Logged in!')
