@@ -14,7 +14,6 @@ with open("player.json", mode='r') as read:
 
 x = user
 
-
 y = input(t.fast_print('Would you like to train? [Y/N]: ')).upper()
 t.delete_all(2)
 if y == 'Y':
