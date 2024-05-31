@@ -38,16 +38,17 @@ if 'S' in login:
     t.fast_print('Tanks have increased health and defensive stats')
     input(t.fast_print('Click enter when you are ready to select your username and class'))
     t.delete_all(10)
-    user = input('Enter a username: ')
     gooduser = ('NotGood')
     while gooduser != ('Good'):
+        user = input('Enter a username: ')
         for players in player:
-            if user != players['user']:
-                print('Username not Taken, Successfully Signed Up')
-                gooduser = 'Good'
+            if user == players['user']:
+                print('Username Taken. Enter another Username ')
+                gooduser = 'hi'
                 break
-            else:
-                user = input('Username Taken. Enter another Username ')
+        if gooduser == 'NotGood':
+            print('Username not taken, Successfully signed up')
+            gooduser = 'Good'
 
     y = input('What class do you want to be ')
     if y ==('Warrior'):
