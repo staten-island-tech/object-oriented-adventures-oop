@@ -60,15 +60,16 @@ if 'S' in login:
     time.sleep(1)
     t.delete_all(30)
 
-    
 elif 'L' in login:
-    user = input('Enter a username: ')
-    for d in player:
-        if user == d['user']:
-            t.fast_print('Logged in')
-        elif user != d['user']:
+    gooduser = 'Notgood'
+    while gooduser != ('Good'):    
+        user = input('Enter a username: ')
+        for d in player:
+            if user == d['user']:
+                t.fast_print('Logged in')
+                gooduser = 'Good'
+        if gooduser != 'Good':
             t.fast_print('That is an invalid login please enter a valid username.')
-            user = input('Enter a username: ')
             
 t.delete_all(10)
 t.slow_print('Logged in!')
