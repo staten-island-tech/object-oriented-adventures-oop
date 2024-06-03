@@ -50,7 +50,7 @@ def playermove(health):
     for i in moves:
         if int(i['level']) <= int(play['levels']):
             print(i)
-    move = input(t.fast_print('What move would you like to use? '))
+    move = input(t.fast_print('What move would you like to use? ')).lower().capitalize()
     for i in moves:
         if move == i['name']:
             if i['movetype'] == 'Magic':

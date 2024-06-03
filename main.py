@@ -32,5 +32,4 @@ Exit Game''')).lower().capitalize()
             import training
     t.fast_print('Thanks for playing the game and come back later!')
 
-import Login_signup
 action()

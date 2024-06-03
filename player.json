@@ -53,5 +53,16 @@
         "speed": 0,
         "magic": 5,
         "role": "Mage"
+    },
+    {
+        "user": "Eyad",
+        "exp": 100000000000000000000,
+        "levels": 1,
+        "money": 0,
+        "strength": 10000000000000000000000000000,
+        "defense": 5000000000000000000000,
+        "speed": 0,
+        "magic": 0,
+        "role": "Tank"
     }
 ]
