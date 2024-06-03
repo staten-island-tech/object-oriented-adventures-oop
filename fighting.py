@@ -66,8 +66,6 @@ def monstermove(health):
 mhp = int(m['health_level'])
 mad = int(m['attack_strength'])
 php = (100+int(play['defense']))
-print(mhp)
-print(php)
 
 if int(p['speed']) >= int(m['speed']):
     mhp = playermove(mhp)

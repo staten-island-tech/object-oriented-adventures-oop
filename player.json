@@ -31,5 +31,16 @@
         "speed": 10,
         "magic": 6,
         "role": "Warrior"
+    },
+    {
+        "user": "hey",
+        "exp": 0,
+        "levels": 1,
+        "money": 0,
+        "strength": 5,
+        "defense": 0,
+        "speed": 0,
+        "magic": 0,
+        "role": "Warrior"
     }
 ]
