@@ -42,5 +42,16 @@
         "speed": 0,
         "magic": 0,
         "role": "Warrior"
+    },
+    {
+        "user": "Matty",
+        "exp": 0,
+        "levels": 1,
+        "money": 0,
+        "strength": 0,
+        "defense": 0,
+        "speed": 0,
+        "magic": 5,
+        "role": "Mage"
     }
 ]
