@@ -13,7 +13,7 @@ t.fast_print('Welcome to the game shop!')
 x = input(t.fast_print('Would you like to buy an item?: [Y/N]')).upper()
 t.delete_all(3)
 if x == 'Y':
-  t.fast_print(Items)
+  print(Items)
   for i in player:
     if user == i['user']:
       y = input(t.fast_print('What item would you like to buy? (use the code provided in the shop): '))

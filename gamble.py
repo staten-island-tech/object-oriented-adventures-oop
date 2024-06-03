@@ -17,8 +17,8 @@ You can insert a certain amount of coins to win more!
 But be careful, you could lose it all anytime.
 Just remember 99 percent of gamblers stop before they win big.
 You can only lost 100 percent of your money, you can win 2000 percent of it back.''')
-time.sleep(2)
-t.delete_all(5)
+input('Press enter when you want to begin.')
+t.delete_all(10)
 
 y = input(t.fast_print('Would you like to Begin Gambling? [Y/N]: ')).upper()
 while y == ('Y'):
