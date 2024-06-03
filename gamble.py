@@ -44,6 +44,7 @@ while y == ('Y'):
                 y = input(t.fast_print('Would you like to continue Gambling? [Y/N]: ')).upper()
 if y == ('N'):
     t.fast_print('Thank you for coming to the gambling room please come back later!')
+    t.delete_all(10)
     from main import action
 
 new_file = "updated.json"
