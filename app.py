@@ -30,6 +30,8 @@ Exit Game''')).lower().capitalize()
             import gamble
         elif 'T' in action:
             import training
+        else:
+            print('You have not entered a valid option')
     t.fast_print('Thanks for playing the game and come back later!')
 
 action()

@@ -70,7 +70,7 @@ while y == 'Y':
 if y != ('Y'):
     t.fast_print('Thanks for coming please come back later!')
     time.sleep(1)
-    from main import action
+    from app import action
 
 new_file = "updated.json"
 with open(new_file, "w") as f:
