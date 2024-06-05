@@ -1,7 +1,7 @@
 import text_functions
 import json
 import os
-from Login_signup import user
+from app import user
 with open("player.json", "r") as f:
     player = json.load(f)  
 with open("item.json", "r") as f:
@@ -29,7 +29,7 @@ if x == 'Y':
               t.fast_print('you are too broke to buy this please come back later when you have more money!')
 else:
   t.fast_print('Thank you for coming to shop and please come back later!')
-  from main import action
+  from app import action
 
 new_file = "updated.json"
 with open(new_file, "w") as f:

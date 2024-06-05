@@ -3,7 +3,7 @@ import text_functions
 import json
 import os
 import time
-from Login_signup import user
+from app import user
 
 with open("player.json", "r") as f:
     player = json.load(f)
@@ -45,7 +45,7 @@ while y == ('Y'):
 if y == ('N'):
     t.fast_print('Thank you for coming to the gambling room please come back later!')
     t.delete_all(10)
-    from main import action
+    from app import action
 
 new_file = "updated.json"
 with open(new_file, "w") as f:

@@ -2,6 +2,8 @@ import json
 import os
 import text_functions
 import time
+from Login_signup import user
+
 t = text_functions.Text
 with open("player.json", "r") as f:
     player = json.load(f)
@@ -13,17 +15,20 @@ with open("moves.json", "r") as f:
     moves = json.load(f)
 
 def action():
-    action = input(t.fast_print('''What is your next course of action?
+    action = 'z'
+    while 'E' not in action:    
+        action = input(t.fast_print('''What is your next course of action?
 Fight
 Gamble
 Shop
 Train
 Exit Game''')).lower().capitalize()
-    time.sleep(1)
-    t.delete_all(10)
-    while 'E' not in action:
+        time.sleep(1)
+        t.delete_all(10)
+        print(action, "laksdfhjg")
         if 'F' in action:
             import fighting
+            break
         elif 'S' in action:
             import shop
         elif 'G' in action:

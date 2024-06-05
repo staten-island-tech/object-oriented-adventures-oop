@@ -1,7 +1,7 @@
 import text_functions
 import json
 import os
-from Login_signup import user
+from app import user
 import random
 import time
 
