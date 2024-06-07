@@ -22,7 +22,7 @@ You can fight monsters to level up and gain money.
 These Monsters are strong, 
 I suggest training to be able to beat them.''')
 input(t.fast_print('Click Enter to continue'))
-t.delete_all(4)
+t.delete_all(10)
 
 cont = input(t.fast_print('Do you wish to continue? [Y/N] ')).lower().capitalize()
 if cont == ('Y'):
