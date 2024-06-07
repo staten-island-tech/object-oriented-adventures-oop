@@ -21,7 +21,7 @@ t.fast_print('''This is the fighting system.
 You can fight monsters to level up and gain money.
 These Monsters are strong, 
 I suggest training to be able to beat them.''')
-time.sleep(2)
+input(t.fast_print('Click Enter to continue'))
 t.delete_all(4)
 
 cont = input(t.fast_print('Do you wish to continue? [Y/N] ')).lower().capitalize()
