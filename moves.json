@@ -58,11 +58,5 @@
         "level": "10",
         "power": "70",
         "movetype": "Physical"
-    },
-    {
-        "name": "Shank Em",
-        "level": "0",
-        "power": "25",
-        "movetype": "Easter Egg"
     }
 ]

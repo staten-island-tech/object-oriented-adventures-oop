@@ -19,8 +19,8 @@ def action():
     while game != 'Done':    
         action = input(t.fast_print('''What is your next course of action?
 Fight - 1
-Gamble - 2
-Shop - 3
+Shop - 2
+Gamble - 3
 Train - 4
 Exit Game - 5''')).lower().capitalize()
         time.sleep(1)
